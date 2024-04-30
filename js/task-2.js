@@ -1,6 +1,18 @@
 // Main function
+// Напиши функцію під назвою makeArray, яка приймає три параметри: firstArray (масив), secondArray (масив) і maxLength (число). Функція повинна створювати новий масив, який містить усі елементи з firstArray, а потім усі елементи з secondArray.
 
+// Якщо кількість елементів у новому масиві перевищує maxLength, функція повинна повернути копію масиву з довжиною maxLength елементів.
+// В іншому випадку функція повинна повернути весь новий масив.
 
+function makeArray(firstArray, secondArray, maxLength) {
+    let newMakeArray = firstArray.concat(secondArray);
+    if (newMakeArray.length > maxLength) {
+        return newMakeArray.slice(0, maxLength);
+        }
+    else {
+        return newMakeArray;
+    }
+}
 
 // Text calls
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
