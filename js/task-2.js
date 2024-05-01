@@ -4,14 +4,23 @@
 // Якщо кількість елементів у новому масиві перевищує maxLength, функція повинна повернути копію масиву з довжиною maxLength елементів.
 // В іншому випадку функція повинна повернути весь новий масив.
 
+// if...else
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//     let newMakeArray = firstArray.concat(secondArray);
+//     if (newMakeArray.length > maxLength) {
+//         return newMakeArray.slice(0, maxLength);
+//         }
+//     else {
+//         return newMakeArray;
+//     }
+// }
+
+// ternary operator
+
 function makeArray(firstArray, secondArray, maxLength) {
-    let newMakeArray = firstArray.concat(secondArray);
-    if (newMakeArray.length > maxLength) {
-        return newMakeArray.slice(0, maxLength);
-        }
-    else {
-        return newMakeArray;
-    }
+let newMakeArray = firstArray.concat(secondArray);
+   return newMakeArray.length > maxLength ? newMakeArray.slice(0, maxLength) : newMakeArray;
 }
 
 // Text calls
